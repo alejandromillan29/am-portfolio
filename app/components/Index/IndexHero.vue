@@ -19,13 +19,13 @@
           <h1 class="text-3xl sm:text-3xl lg:text-6xl inter-700 mb-7">
             <div>
               Hey, I'm
-              <span class="gradient-text bg-clip-text text-transparent"
+              <span class="am-gradient-text bg-clip-text text-transparent"
                 >Alejandro</span
               >🚀
             </div>
             <div>
               A
-              <span class="gradient-text bg-clip-text text-transparent"
+              <span class="am-gradient-text bg-clip-text text-transparent"
                 >Software developer</span
               >
             </div>

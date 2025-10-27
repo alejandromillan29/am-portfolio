@@ -1,9 +1,12 @@
 <template>
   <UHeader class="border-b border-stone-200 dark:border-stone-800">
     <template #title>
-      <span class="gradient-text bg-clip-text text-transparent"
-        >Alejandro Millan</span
-      >
+      <div class="flex flex-row items-center gap-2">
+        <UIcon name="i-lucide-terminal" class="size-7" />
+        <span class="am-gradient-text bg-clip-text text-transparent"
+          >Alejandro Millan</span
+        >
+      </div>
     </template>
     <UNavigationMenu :items="items" />
     <template #right>
