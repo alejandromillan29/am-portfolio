@@ -1,8 +1,8 @@
 <template>
-  <UContainer class="py-10">
+  <UContainer class="py-10" v-if="project">
     <div class="grid grid-cols-12 gap-7">
       <div
-        class="col-span-12 lg:col-span-7 dark:bg-stone-900 bg-stone-200 py-10 rounded-lg"
+        class="col-span-12 lg:col-span-7 dark:bg-stone-900 bg-stone-100 py-10 rounded-lg"
       >
         <div class="flex flex-row items-center w-full h-full">
           <UCarousel
@@ -36,6 +36,17 @@
           />
         </div>
         <div class="am-separator mb-8" />
+        <div class="mb-4 text-sm flex flex-row gap-3 font-semibold am-text">
+          <div>
+            <span class="am-gradient-text">Developed:</span>
+            {{ project?.year }}
+          </div>
+          <div>|</div>
+          <div>
+            <span class="am-gradient-text">Scope:</span>
+            {{ project?.type }}
+          </div>
+        </div>
         <div class="flex flex-row gap-4">
           <UButton
             color="neutral"

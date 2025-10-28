@@ -6,6 +6,10 @@
     @apply dark:text-gray-300 text-stone-600;
 }
 
+.am-text {
+  @apply dark:text-gray-300 text-stone-600
+}
+
 .am-separator {
   @apply border-b border-stone-200 dark:border-stone-800
 }

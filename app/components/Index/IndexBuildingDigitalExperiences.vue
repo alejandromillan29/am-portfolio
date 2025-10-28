@@ -22,7 +22,7 @@
             {{ item.title }}
           </div>
         </div>
-        <div class="mb-3 dark:text-gray-300 text-stone-600 inter-400">
+        <div class="mb-3 am-text">
           {{ item.description }}
         </div>
         <ul class="inter-500 list-disc ml-6 text-stone-800 dark:text-white">
