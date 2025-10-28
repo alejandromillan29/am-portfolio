@@ -7,10 +7,11 @@
         <div
           class="inter-700 text-3xl 2xl:text-5xl dark:text-white text-stone-800 mb-2"
         >
-          Bringing your ideas to life. Let's turn your vision into reality
+          Ready to Bring Your Team's Vision to Life
         </div>
         <div class="text:lg 2xl:text-xl dark:text-white text-stone-800">
-          Have a project in mind or just want to chat? Let's connect!
+          Looking for a frontend developer who blends creativity with
+          functionality? I'd love to hear about your next project or role.
         </div>
       </div>
       <div
