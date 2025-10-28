@@ -18,7 +18,7 @@
         <div class="flex flex-row items-center gap-3 mb-4">
           <UIcon
             :name="item.icon"
-            class="size-8 bg-linear-to-b from-rose-500 to-indigo-500 text-transparent fill-current"
+            class="size-8 bg-linear-to-b from-[#e390b9] to-[#718add] text-transparent fill-current"
           />
           <div class="text-2xl inter-700 text-stone-800 dark:text-white">
             {{ item.title }}
