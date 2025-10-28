@@ -38,13 +38,13 @@
           />
         </UFormField>
         <div class="flex flex-row justify-end">
-          <UButton label="Send" color="neutral" variant="subtle" />
+          <UButton
+            label="Send"
+            color="neutral"
+            icon="i-lucide-send-horizontal"
+          />
         </div>
       </div>
     </div>
   </UContainer>
 </template>
-
-<script lang="ts" setup>
-import BG from "@/assets/images/contact_form_bg_2.jpg";
-</script>
