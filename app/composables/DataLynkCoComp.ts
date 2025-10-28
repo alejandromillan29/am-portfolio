@@ -1,3 +1,6 @@
+import Img1 from "@/assets/images/project_lynkco_1.png";
+import Img2 from "@/assets/images/project_lynkco_2.png";
+import Img3 from "@/assets/images/project_lynkco_3.png";
 import type { ProjectData } from "~/types/ProjectData";
 
 export default function lynkcoComp() {
@@ -5,7 +8,7 @@ export default function lynkcoComp() {
     id: "lynkco",
     name: "Lynk Co.",
     type: "Client",
-    imgs: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    imgs: [Img1, Img2, Img3],
     descriptionShort:
       "A web platform for exclusive event invitations, sending email invites and managing access via QR codes and on-site scanning.",
     descriptionLong:

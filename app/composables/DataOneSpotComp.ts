@@ -1,3 +1,6 @@
+import Img1 from "@/assets/images/project_os_1.png";
+import Img2 from "@/assets/images/project_os_2.png";
+import Img3 from "@/assets/images/project_os_3.png";
 import type { ProjectData } from "~/types/ProjectData";
 
 export default function onespotComp() {
@@ -5,7 +8,7 @@ export default function onespotComp() {
     id: "onespot",
     name: "One Spot",
     type: "Proprietary",
-    imgs: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    imgs: [Img1, Img2, Img3],
     descriptionShort:
       "A cross-platform app to create, discover, and manage events with built-in ticket sales.",
     descriptionLong:

@@ -7,11 +7,6 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-.gradient-text {
-  background-color: hsl(263 77% 73%);
-  background-image: linear-gradient(180deg, hsl(263 77% 73%) 0, #000 200%);
-}
-
 .am-gradient-text {
   background: linear-gradient(to bottom, #d17f99,  #5673ba);
   -webkit-background-clip: text;
