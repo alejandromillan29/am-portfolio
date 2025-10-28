@@ -19,6 +19,11 @@
       >
         {{ link.label }}
       </div>
+      <UIcon
+        name="i-lucide-external-link"
+        class="size-2.5 mt-[-3px] ml-[-3px]"
+        v-if="isLinkToExternal(link.to)"
+      />
     </div>
   </ULink>
 </template>
@@ -28,4 +33,8 @@ import type { NavigationMenuItem } from "@nuxt/ui";
 defineProps<{
   link: NavigationMenuItem;
 }>();
+
+const isLinkToExternal = (to: any) => {
+  return to[0] !== "/";
+};
 </script>

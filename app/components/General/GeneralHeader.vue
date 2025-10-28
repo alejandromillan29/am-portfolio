@@ -23,8 +23,8 @@
         :ui="{
           overlay: 'dark:bg-stone-950/75',
           content: 'dark:bg-stone-950',
-          handle: ['shrink-0 !bg-accented', 'transition-opacity'],
         }"
+        v-model:open="isDrawerOpen"
       >
         <UButton
           icon="i-lucide-menu"
@@ -34,7 +34,11 @@
         />
         <template #body>
           <div class="w-[65vw] flex flex-col gap-4">
-            <GeneralNavLink v-for="link in items" :link="link" />
+            <GeneralNavLink
+              v-for="link in items"
+              :link="link"
+              @click="isDrawerOpen = false"
+            />
           </div>
         </template>
       </UDrawer>
