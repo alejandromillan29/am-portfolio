@@ -1,10 +1,8 @@
 <template>
   <UContainer class="py-25">
     <div class="mb-15">
-      <div class="text-4xl inter-700 mb-3 text-stone-800 dark:text-white">
-        Building Digital Experiences
-      </div>
-      <div class="dark:text-gray-300 text-stone-600 inter-400">
+      <div class="am-header-text mb-3">Building Digital Experiences</div>
+      <div class="am-subheader-text">
         I design and develop high-quality applications that are intuitive,
         reliable, and impactful for users and businesses alike.
       </div>

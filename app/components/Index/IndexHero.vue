@@ -56,7 +56,7 @@
       </div>
     </UContainer>
   </div>
-  <div class="border-b border-stone-200 dark:border-stone-800" />
+  <div class="am-separator" />
 </template>
 
 <script lang="ts" setup>

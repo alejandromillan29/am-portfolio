@@ -1,16 +1,16 @@
 <template>
   <UContainer class="py-10">
-    <div class="text-4xl inter-700 mb-2 text-stone-800 dark:text-white">
-      Projects
-    </div>
-    <div class="dark:text-gray-300 text-stone-600 mb-6">
+    <div class="am-header-text mb-3">Projects</div>
+    <div class="am-subheader-text mb-6">
       Here you will find a selection of projects I have worked on.
     </div>
     <div class="grid grid-cols-12 gap-4">
-      <div
+      <ULink
+        as="div"
         class="col-span-12 sm:col-span-4 lg:col-span-4 w-full aspect-square bg-cover bg-center bg-no-repeat rounded-lg cursor-pointer border border-stone-300"
-        :style="{ backgroundImage: `url(${project.imgs[0]})` }"
         v-for="project in projects"
+        :to="`/projects/${project.id}`"
+        :style="{ backgroundImage: `url(${project.imgs[0]})` }"
       >
         <div
           class="group w-full h-full hover:bg-stone-500/30 rounded-lg transition-colors duration-300 flex flex-col items-center justify-end p-5"
@@ -31,7 +31,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </ULink>
     </div>
   </UContainer>
 </template>
