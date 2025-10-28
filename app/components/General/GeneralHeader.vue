@@ -9,38 +9,23 @@
       </div>
     </template>
     <div class="flex flex-row gap-2">
-      <ULink v-for="link in items" class="text-stone-500" :to="link.to">
-        <div
-          class="flex flex-row items-center gap-2 hover:bg-stone-100 dark:hover:bg-stone-800 px-2 py-1 rounded-lg"
-          :class="
-            link.active ? 'bg-stone-100  dark:bg-stone-800 inter-500' : ''
-          "
-        >
-          <UIcon
-            :name="link.icon!"
-            :class="
-              link.active
-                ? 'bg-linear-to-b from-[#e390b9] to-[#718add] text-transparent fill-current'
-                : ''
-            "
-          />
-          <div
-            :class="
-              link.active
-                ? 'am-gradient-text bg-clip-text text-transparent'
-                : ''
-            "
-          >
-            {{ link.label }}
-          </div>
-        </div>
-      </ULink>
+      <GeneralNavLink v-for="link in items" :link="link" />
     </div>
     <template #right>
       <UColorModeButton />
     </template>
     <template #toggle>
-      <UDrawer direction="right" title="Menu" description="Navigation" inset>
+      <UDrawer
+        direction="right"
+        title="Menu"
+        description="Navigation"
+        inset
+        :ui="{
+          overlay: 'dark:bg-stone-950/75',
+          content: 'dark:bg-stone-950',
+          handle: ['shrink-0 !bg-accented', 'transition-opacity'],
+        }"
+      >
         <UButton
           icon="i-lucide-menu"
           color="neutral"
@@ -48,7 +33,9 @@
           class="sm:hidden"
         />
         <template #body>
-          <div class="w-[60vw]">asdf</div>
+          <div class="w-[65vw] flex flex-col gap-4">
+            <GeneralNavLink v-for="link in items" :link="link" />
+          </div>
         </template>
       </UDrawer>
     </template>
@@ -59,6 +46,9 @@
 import type { NavigationMenuItem } from "@nuxt/ui";
 
 const route = useRoute();
+
+const isDrawerOpen = ref(false);
+
 const items = computed<NavigationMenuItem[]>(() => [
   {
     label: "Home",
