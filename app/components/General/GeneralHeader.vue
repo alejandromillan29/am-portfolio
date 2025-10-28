@@ -2,13 +2,40 @@
   <UHeader class="border-b border-stone-200 dark:border-stone-800">
     <template #title>
       <div class="flex flex-row items-center gap-2">
-        <UIcon name="i-lucide-terminal" class="size-7" />
+        <UIcon name="i-lucide-terminal" class="size-6" />
         <span class="am-gradient-text bg-clip-text text-transparent"
           >Alejandro Millan</span
         >
       </div>
     </template>
-    <UNavigationMenu :items="items" />
+    <div class="flex flex-row gap-2">
+      <ULink v-for="link in items" class="text-stone-500" :to="link.to">
+        <div
+          class="flex flex-row items-center gap-2 hover:bg-stone-100 dark:hover:bg-stone-800 px-2 py-1 rounded-lg"
+          :class="
+            link.active ? 'bg-stone-100  dark:bg-stone-800 inter-500' : ''
+          "
+        >
+          <UIcon
+            :name="link.icon!"
+            :class="
+              link.active
+                ? 'bg-linear-to-b from-[#e390b9] to-[#718add] text-transparent fill-current'
+                : ''
+            "
+          />
+          <div
+            :class="
+              link.active
+                ? 'am-gradient-text bg-clip-text text-transparent'
+                : ''
+            "
+          >
+            {{ link.label }}
+          </div>
+        </div>
+      </ULink>
+    </div>
     <template #right>
       <UColorModeButton />
     </template>
@@ -18,7 +45,7 @@
           icon="i-lucide-menu"
           color="neutral"
           variant="ghost"
-          class="block lg:hidden"
+          class="sm:hidden"
         />
         <template #body>
           <div class="w-[60vw]">asdf</div>
