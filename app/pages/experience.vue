@@ -8,25 +8,25 @@
           mobile applications.
         </div>
         <div class="text-lg am-gradient-text font-semibold mb-3">Frontend</div>
-        <div class="grid grid-cols-12 gap-4 mb-6">
-          <div class="col-span-2" v-for="item in 9">
-            <img src="https://placehold.co/100x100" />
+        <div class="grid grid-cols-9 gap-4 mb-6 items-center">
+          <div class="col-span-1" v-for="img in frontend">
+            <img :src="img" />
           </div>
         </div>
         <div class="text-lg am-gradient-text font-semibold mb-3">
           Backend & Cloud
         </div>
-        <div class="grid grid-cols-12 gap-4 mb-6">
-          <div class="col-span-2" v-for="item in 4">
-            <img src="https://placehold.co/100x100" />
+        <div class="grid grid-cols-9 gap-4 mb-6 items-center">
+          <div class="col-span-1" v-for="img in backend">
+            <img :src="img" />
           </div>
         </div>
         <div class="text-lg am-gradient-text font-semibold mb-3">
           Testing & Deployment
         </div>
-        <div class="grid grid-cols-12 gap-4 mb-6">
-          <div class="col-span-2" v-for="item in 4">
-            <img src="https://placehold.co/100x100" />
+        <div class="grid grid-cols-9 gap-4 mb-6 items-center">
+          <div class="col-span-1" v-for="img in testing">
+            <img :src="img" />
           </div>
         </div>
       </div>
@@ -52,30 +52,34 @@
 </template>
 
 <script setup lang="ts">
-const frontend = [
-  "https://placehold.co/100x100",
-  "https://placehold.co/100x100",
-  "https://placehold.co/100x100",
-  "https://placehold.co/100x100",
-  "https://placehold.co/100x100",
-  "https://placehold.co/100x100",
-  "https://placehold.co/100x100",
-  "https://placehold.co/100x100",
-];
+// FRONT
+import vue from "@/assets/images/skills_vue.svg";
+import nuxt from "@/assets/images/skills_nuxt.svg";
+import quasar from "@/assets/images/skills_quasar.svg";
+import ionic from "@/assets/images/skills_ionic.svg";
+import capacitor from "@/assets/images/skills_capacitor.svg";
+import angular from "@/assets/images/skills_angular.svg";
+import pwa from "@/assets/images/skills_pwa.png";
+import tailwind from "@/assets/images/skills_tailwind.png";
 
-const backend = [
-  "https://placehold.co/100x100",
-  "https://placehold.co/100x100",
-  "https://placehold.co/100x100",
-  "https://placehold.co/100x100",
-];
+// BACK
+import firebase from "@/assets/images/skills_firebase.svg";
+import node from "@/assets/images/skills_node.png";
+import aws from "@/assets/images/skills_aws.png";
+import express from "@/assets/images/skills_express.png";
+import postgresql from "@/assets/images/skills_postgresql.png";
 
-const testing = [
-  "https://placehold.co/100x100",
-  "https://placehold.co/100x100",
-  "https://placehold.co/100x100",
-  "https://placehold.co/100x100",
-];
+// TEST
+import cypress from "@/assets/images/skills_cypress.svg";
+import appium from "@/assets/images/skills_appium.png";
+import github_actions from "@/assets/images/skills_github_actions.png";
+import fastlane from "@/assets/images/skills_fastlane.svg";
+
+const frontend = [vue, nuxt, quasar, tailwind, ionic, capacitor, angular, pwa];
+
+const backend = [firebase, node, aws, express, postgresql];
+
+const testing = [cypress, appium, github_actions, fastlane];
 
 const items = ref([
   {
