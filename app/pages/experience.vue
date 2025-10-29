@@ -12,11 +12,16 @@
             {{ skill.title }}
           </div>
           <div class="grid grid-cols-7 gap-4 mb-6 items-center">
-            <div class="col-span-1" v-for="skl in skill.skill">
+            <div class="col-span-1 relative group" v-for="skl in skill.skill">
               <div
                 class="bg-white rounded-full p-2 w-full aspect-square flex flex-row items-center"
               >
-                <img :src="skl" />
+                <img :src="skl.img" />
+              </div>
+              <div
+                class="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-stone-800 text-white dark:bg-white dark:text-stone-800 text-sm rounded py-1 px-2 whitespace-nowrap z-10"
+              >
+                {{ skl.label }}
               </div>
             </div>
           </div>
@@ -70,15 +75,86 @@ import fastlane from "@/assets/images/skills_fastlane.svg";
 const skills = [
   {
     title: "Frontend",
-    skill: [vue, nuxt, quasar, tailwind, ionic, capacitor, angular, pwa],
+    skill: [
+      {
+        label: "Vue.js",
+        img: vue,
+      },
+      {
+        label: "Nuxt",
+        img: nuxt,
+      },
+      {
+        label: "Quasar",
+        img: quasar,
+      },
+      {
+        label: "Tailwind",
+        img: tailwind,
+      },
+      {
+        label: "Ionic",
+        img: ionic,
+      },
+      {
+        label: "Capacitor",
+        img: capacitor,
+      },
+      {
+        label: "Progressive Web App",
+        img: pwa,
+      },
+      {
+        label: "Angular",
+        img: angular,
+      },
+    ],
   },
   {
     title: "Backend & Cloud",
-    skill: [firebase, node, aws, express, postgresql],
+    skill: [
+      {
+        label: "Firebase",
+        img: firebase,
+      },
+      {
+        label: "Node",
+        img: node,
+      },
+      {
+        label: "AWS",
+        img: aws,
+      },
+      {
+        label: "Express",
+        img: express,
+      },
+      {
+        label: "PostgreSQL",
+        img: postgresql,
+      },
+    ],
   },
   {
     title: "Testing & Deployment",
-    skill: [cypress, appium, github_actions, fastlane],
+    skill: [
+      {
+        label: "Cypress",
+        img: cypress,
+      },
+      {
+        label: "Appium",
+        img: appium,
+      },
+      {
+        label: "Github Actions",
+        img: github_actions,
+      },
+      {
+        label: "Fastlane",
+        img: fastlane,
+      },
+    ],
   },
 ];
 
