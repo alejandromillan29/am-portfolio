@@ -41,4 +41,19 @@
 
 <script lang="ts" setup>
 const projects = ProjectsComp();
+
+useHead({
+  title: "Alejandro Millan | Projects",
+  meta: [
+    {
+      name: "description",
+      content: "Here you will find a selection of projects I have worked on.",
+    },
+    { property: "og:title", content: "Alejandro Millan | Projects" },
+    {
+      property: "og:description",
+      content: "Here you will find a selection of projects I have worked on.",
+    },
+  ],
+});
 </script>

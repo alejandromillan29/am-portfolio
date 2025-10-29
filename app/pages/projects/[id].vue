@@ -89,8 +89,22 @@ const project = ref<ProjectData>();
 const projects = ProjectsComp();
 const route = useRoute();
 
-onMounted(() => {
-  const findProj = projects.find((proj) => proj.id === route.params.id);
-  if (findProj) project.value = findProj;
-});
+const findProj = projects.find((proj) => proj.id === route.params.id);
+if (findProj) {
+  project.value = findProj;
+  useHead({
+    title: `Alejandro Millan | ${findProj.name}`,
+    meta: [
+      {
+        name: "description",
+        content: findProj.descriptionShort,
+      },
+      { property: "og:title", content: `Alejandro Millan | ${findProj.name}` },
+      {
+        property: "og:description",
+        content: findProj.descriptionShort,
+      },
+    ],
+  });
+}
 </script>
