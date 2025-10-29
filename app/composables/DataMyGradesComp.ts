@@ -1,3 +1,6 @@
+import Img1 from "@/assets/images/project_mygrades_1.png";
+import Img2 from "@/assets/images/project_mygrades_2.png";
+import Img3 from "@/assets/images/project_mygrades_3.png";
 import type { ProjectData } from "~/types/ProjectData";
 
 export default function mygradesComp() {
@@ -5,7 +8,7 @@ export default function mygradesComp() {
     id: "mygrades",
     name: "myGrades",
     type: "Personal",
-    imgs: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    imgs: [Img1, Img2, Img3],
     descriptionShort:
       "A web app with PWA support for students to track grades and estimate their final scores.",
     descriptionLong:

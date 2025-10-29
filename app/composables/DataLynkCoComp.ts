@@ -6,7 +6,7 @@ import type { ProjectData } from "~/types/ProjectData";
 export default function lynkcoComp() {
   return {
     id: "lynkco",
-    name: "Lynk Co.",
+    name: "Lynk Co. RSVP",
     type: "Client",
     imgs: [Img1, Img2, Img3],
     descriptionShort:

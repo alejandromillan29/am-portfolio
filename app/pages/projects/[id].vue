@@ -51,20 +51,28 @@
           <UButton
             color="neutral"
             label="Visit Project"
-            icon="i-lucide-globe"
+            leading-icon="i-lucide-globe"
             variant="ghost"
             class="dark:hover:bg-stone-600 dark:active:bg-stone-700"
             :to="project?.url"
             target="_blank"
+            trailing-icon="i-lucide-external-link"
+            :ui="{
+              trailingIcon: 'size-2.5 mt-[-10px]',
+            }"
           />
           <UButton
             color="neutral"
             label="Visit Repo"
-            icon="i-lucide-github"
+            leading-icon="i-lucide-github"
             variant="ghost"
             class="dark:hover:bg-stone-600 dark:active:bg-stone-700"
             :to="project?.repo"
             target="_blank"
+            trailing-icon="i-lucide-external-link"
+            :ui="{
+              trailingIcon: 'size-2.5 mt-[-10px]',
+            }"
             v-if="project?.repo"
           />
         </div>
