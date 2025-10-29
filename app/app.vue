@@ -2,7 +2,7 @@
   <UApp>
     <div class="dark:bg-stone-950">
       <GeneralHeader class="dark:bg-stone-950" />
-      <UMain>
+      <UMain class="overflow-x-hidden">
         <NuxtPage />
       </UMain>
       <GeneralFooter />
