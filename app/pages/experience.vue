@@ -7,26 +7,18 @@
           Technologies and tools I leverage to create high-quality web and
           mobile applications.
         </div>
-        <div class="text-lg am-gradient-text font-semibold mb-3">Frontend</div>
-        <div class="grid grid-cols-9 gap-4 mb-6 items-center">
-          <div class="col-span-1" v-for="img in frontend">
-            <img :src="img" />
+        <div v-for="skill in skills">
+          <div class="text-lg am-gradient-text font-semibold mb-3">
+            {{ skill.title }}
           </div>
-        </div>
-        <div class="text-lg am-gradient-text font-semibold mb-3">
-          Backend & Cloud
-        </div>
-        <div class="grid grid-cols-9 gap-4 mb-6 items-center">
-          <div class="col-span-1" v-for="img in backend">
-            <img :src="img" />
-          </div>
-        </div>
-        <div class="text-lg am-gradient-text font-semibold mb-3">
-          Testing & Deployment
-        </div>
-        <div class="grid grid-cols-9 gap-4 mb-6 items-center">
-          <div class="col-span-1" v-for="img in testing">
-            <img :src="img" />
+          <div class="grid grid-cols-7 gap-4 mb-6 items-center">
+            <div class="col-span-1" v-for="skl in skill.skill">
+              <div
+                class="bg-white rounded-full p-2 w-full aspect-square flex flex-row items-center"
+              >
+                <img :src="skl" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -66,20 +58,29 @@ import tailwind from "@/assets/images/skills_tailwind.png";
 import firebase from "@/assets/images/skills_firebase.svg";
 import node from "@/assets/images/skills_node.png";
 import aws from "@/assets/images/skills_aws.png";
-import express from "@/assets/images/skills_express.png";
-import postgresql from "@/assets/images/skills_postgresql.png";
+import express from "@/assets/images/skills_express.svg";
+import postgresql from "@/assets/images/skills_postgresql.svg";
 
 // TEST
-import cypress from "@/assets/images/skills_cypress.svg";
-import appium from "@/assets/images/skills_appium.png";
-import github_actions from "@/assets/images/skills_github_actions.png";
+import cypress from "@/assets/images/skills_cypress.webp";
+import appium from "@/assets/images/skills_appium.svg";
+import github_actions from "@/assets/images/skills_github_actions.svg";
 import fastlane from "@/assets/images/skills_fastlane.svg";
 
-const frontend = [vue, nuxt, quasar, tailwind, ionic, capacitor, angular, pwa];
-
-const backend = [firebase, node, aws, express, postgresql];
-
-const testing = [cypress, appium, github_actions, fastlane];
+const skills = [
+  {
+    title: "Frontend",
+    skill: [vue, nuxt, quasar, tailwind, ionic, capacitor, angular, pwa],
+  },
+  {
+    title: "Backend & Cloud",
+    skill: [firebase, node, aws, express, postgresql],
+  },
+  {
+    title: "Testing & Deployment",
+    skill: [cypress, appium, github_actions, fastlane],
+  },
+];
 
 const items = ref([
   {

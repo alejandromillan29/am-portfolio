@@ -19,8 +19,28 @@
       </div>
       <div class="col-span-3 sm:col-span-8">
         <div class="flex flex-row gap-3 justify-end">
-          <UButton icon="i-lucide-linkedin" variant="ghost" color="neutral" />
-          <UButton icon="i-lucide-github" variant="ghost" color="neutral" />
+          <UButton
+            to="https://www.linkedin.com/in/amilland/"
+            target="_blank"
+            leading-icon="i-lucide-linkedin"
+            variant="ghost"
+            color="neutral"
+            trailing-icon="i-lucide-external-link"
+            :ui="{
+              trailingIcon: 'size-2.5 mt-[-10px]',
+            }"
+          />
+          <UButton
+            to="https://github.com/KidDarknezz"
+            target="_blank"
+            leading-icon="i-lucide-github"
+            variant="ghost"
+            color="neutral"
+            trailing-icon="i-lucide-external-link"
+            :ui="{
+              trailingIcon: 'size-2.5 mt-[-10px]',
+            }"
+          />
         </div>
       </div>
     </div>

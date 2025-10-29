@@ -42,15 +42,37 @@
               label=" View Projects"
               color="neutral"
               icon="i-lucide-layout-dashboard"
+              to="/projects"
             />
             <UButton
               label=" View Experience"
               color="neutral"
               icon="i-lucide-user-star"
+              to="/experience"
             />
             <span class="hidden sm:block">|</span>
-            <UButton icon="i-lucide-linkedin" variant="ghost" color="neutral" />
-            <UButton icon="i-lucide-github" variant="ghost" color="neutral" />
+            <UButton
+              leading-icon="i-lucide-linkedin"
+              variant="ghost"
+              color="neutral"
+              to="https://www.linkedin.com/in/amilland/"
+              target="_blank"
+              trailing-icon="i-lucide-external-link"
+              :ui="{
+                trailingIcon: 'size-2.5 mt-[-10px]',
+              }"
+            />
+            <UButton
+              leading-icon="i-lucide-github"
+              variant="ghost"
+              color="neutral"
+              to="https://github.com/KidDarknezz"
+              target="_blank"
+              trailing-icon="i-lucide-external-link"
+              :ui="{
+                trailingIcon: 'size-2.5 mt-[-10px]',
+              }"
+            />
           </div>
         </div>
       </div>

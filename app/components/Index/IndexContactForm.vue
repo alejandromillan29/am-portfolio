@@ -21,21 +21,21 @@
           <input
             type="text"
             placeholder="John Doe"
-            class="w-full p-3 mb-4 rounded-lg border border-stone-500 hover:border-white focus:outline-white"
+            class="w-full p-3 mb-4 rounded-lg border border-stone-300 hover:border-stone-400 focus:outline-stone-500 dark:border-stone-500 dark:hover:border-white dark:focus:outline-white"
           />
         </UFormField>
         <UFormField label="Email">
           <input
             type="email"
             placeholder="john.doe@gmail.com"
-            class="w-full p-3 mb-4 rounded-lg border border-stone-500 hover:border-white focus:outline-white"
+            class="w-full p-3 mb-4 rounded-lg border border-stone-300 hover:border-stone-400 focus:outline-stone-500 dark:border-stone-500 dark:hover:border-white dark:focus:outline-white"
           />
         </UFormField>
         <UFormField label="Message">
           <textarea
             placeholder="Your message here..."
             rows="5"
-            class="w-full p-3 mb-4 rounded-lg border border-stone-500 hover:border-white focus:outline-white"
+            class="w-full p-3 mb-4 rounded-lg border border-stone-300 hover:border-stone-400 focus:outline-stone-500 dark:border-stone-500 dark:hover:border-white dark:focus:outline-white"
           />
         </UFormField>
         <div class="flex flex-row justify-end">
