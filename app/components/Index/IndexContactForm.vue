@@ -22,6 +22,7 @@
             type="text"
             placeholder="John Doe"
             class="w-full p-3 mb-4 rounded-lg border border-stone-300 hover:border-stone-400 focus:outline-stone-500 dark:border-stone-500 dark:hover:border-white dark:focus:outline-white"
+            v-model="name"
           />
         </UFormField>
         <UFormField label="Email">
@@ -29,6 +30,7 @@
             type="email"
             placeholder="john.doe@gmail.com"
             class="w-full p-3 mb-4 rounded-lg border border-stone-300 hover:border-stone-400 focus:outline-stone-500 dark:border-stone-500 dark:hover:border-white dark:focus:outline-white"
+            v-model="email"
           />
         </UFormField>
         <UFormField label="Message">
@@ -36,6 +38,7 @@
             placeholder="Your message here..."
             rows="5"
             class="w-full p-3 mb-4 rounded-lg border border-stone-300 hover:border-stone-400 focus:outline-stone-500 dark:border-stone-500 dark:hover:border-white dark:focus:outline-white"
+            v-model="message"
           />
         </UFormField>
         <div class="flex flex-row justify-end">
@@ -43,9 +46,82 @@
             label="Send"
             color="neutral"
             icon="i-lucide-send-horizontal"
+            :style="{ cursor: disableSendBtn ? 'not-allowed' : '' }"
+            :disabled="disableSendBtn"
+            :loading="loading"
+            @click="submitForm()"
           />
         </div>
       </div>
     </div>
   </UContainer>
 </template>
+
+<script lang="ts" setup>
+const toast = useToast();
+
+const name = ref("");
+const email = ref("");
+const message = ref("");
+const loading = ref(false);
+
+const cleanForm = () => {
+  name.value = "";
+  email.value = "";
+  message.value = "";
+};
+
+const submitForm = async () => {
+  try {
+    loading.value = true;
+    const sendEmailReq = await fetch(
+      "https://us-central1-onespot-live.cloudfunctions.net/contactEmail",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          template: "d-a2d3155c689746aea3956f9ff85fb087",
+          email: "amilland29@gmail.com",
+          data: {
+            fullName: name.value,
+            company: "",
+            email: email.value,
+            service: message.value,
+            phone: "",
+          },
+        }),
+      }
+    );
+    const respData = await sendEmailReq.json();
+    if (respData.response === "ok") {
+      toast.add({
+        title: "Success",
+        description: "The form has been submitted.",
+        color: "success",
+      });
+      cleanForm();
+    } else throw new Error();
+  } catch {
+    toast.add({
+      title: "Error",
+      description: "An error ocurred.",
+      color: "error",
+    });
+  } finally {
+    loading.value = false;
+  }
+};
+
+const disableSendBtn = computed(() => {
+  if (
+    !name.value.trim() ||
+    !email.value.trim() ||
+    !message.value.trim() ||
+    loading.value
+  )
+    return true;
+  return false;
+});
+</script>
