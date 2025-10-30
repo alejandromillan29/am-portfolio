@@ -13,7 +13,7 @@ export default function mygradesComp() {
       "A web app with PWA support for students to track grades and estimate their final scores.",
     descriptionLong:
       "myGrades is a web app that helps students monitor their academic progress. With PWA integrations, users can record grades, calculate approximate final scores, and stay updated across devices — all without installing a native app.",
-    techStack: ["Vue", "Quasar", "Firebase"],
+    techStack: ["Vue", "Quasar", "PWA", "Firebase"],
     url: "https://gradesapp-ccfd8.web.app/",
     year: "2021",
     repo: "https://github.com/KidDarknezz/grades-app",
