@@ -1,3 +1,5 @@
+import Img1 from "@/assets/images/project_demfantasy_1.png";
+import Img2 from "@/assets/images/project_demfantasy_2.png";
 import type { ProjectData } from "~/types/ProjectData";
 
 export default function osAWSDemoComp() {
@@ -5,7 +7,7 @@ export default function osAWSDemoComp() {
     id: "demfantasy",
     name: "Dem Fantasy",
     type: "Client",
-    imgs: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    imgs: [Img1, Img2],
     descriptionShort:
       "A PWA that brings fantasy gaming to local kickball and ultimate frisbee leagues, boosting community engagement and competition.",
     descriptionLong:

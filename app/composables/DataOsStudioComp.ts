@@ -1,3 +1,8 @@
+import Img1 from "@/assets/images/project_oss_1.png";
+import Img2 from "@/assets/images/project_oss_2.png";
+import Img3 from "@/assets/images/project_oss_3.png";
+import Img4 from "@/assets/images/project_oss_4.png";
+import Img5 from "@/assets/images/project_oss_5.png";
 import type { ProjectData } from "~/types/ProjectData";
 
 export default function osstudioComp() {
@@ -5,7 +10,7 @@ export default function osstudioComp() {
     id: "osstudio",
     name: "One Spot Studio",
     type: "Proprietary",
-    imgs: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    imgs: [Img1, Img2, Img3, Img4, Img5],
     descriptionShort:
       "A fast, SEO-optimized website for my creative studio, built with server-side rendering to combine the power of a SPA with top-tier performance.",
     descriptionLong:
