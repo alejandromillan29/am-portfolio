@@ -1,3 +1,5 @@
+import Img1 from "@/assets/images/project_passcrate_1.png";
+import Img2 from "@/assets/images/project_passcrate_2.png";
 import type { ProjectData } from "~/types/ProjectData";
 
 export default function passcrateComp() {
@@ -5,7 +7,7 @@ export default function passcrateComp() {
     id: "passcrate",
     name: "PassCrate",
     type: "Personal",
-    imgs: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    imgs: [Img1, Img2],
     descriptionShort:
       "A secure PWA password manager built to explore encryption and data security while providing an easy way to store passwords safely online.",
     descriptionLong:

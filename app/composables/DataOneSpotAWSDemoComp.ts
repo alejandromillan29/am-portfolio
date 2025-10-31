@@ -1,3 +1,6 @@
+import Img1 from "@/assets/images/project_osdemo_1.png";
+import Img2 from "@/assets/images/project_osdemo_2.png";
+import Img3 from "@/assets/images/project_osdemo_3.png";
 import type { ProjectData } from "~/types/ProjectData";
 
 export default function osAWSDemoComp() {
@@ -5,7 +8,7 @@ export default function osAWSDemoComp() {
     id: "osawsdemo",
     name: "One Spot (AWS Demo)",
     type: "Personal",
-    imgs: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    imgs: [Img1, Img2, Img3],
     descriptionShort:
       "A simplified version of the One Spot app built to strengthen my backend and cloud development skills using AWS services.",
     descriptionLong:
