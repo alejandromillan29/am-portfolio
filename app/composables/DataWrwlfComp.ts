@@ -1,3 +1,5 @@
+import Img1 from "@/assets/images/project_wrwlf_1.png";
+import Img2 from "@/assets/images/project_wrwlf_2.png";
 import type { ProjectData } from "~/types/ProjectData";
 
 export default function mygradesComp() {
@@ -5,7 +7,7 @@ export default function mygradesComp() {
     id: "wrwlf",
     name: "Wrwlf",
     type: "Personal",
-    imgs: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    imgs: [Img1, Img2],
     descriptionShort:
       "A real-time web app inspired by the Werewolf board game, built to explore live database updates and game state handling.",
     descriptionLong:
