@@ -3,6 +3,13 @@
 @import "@nuxt/ui";
 @import "./utilities.css";
 
+@layer base {
+  html,
+  body {
+    @apply bg-white dark:bg-stone-950;
+  }
+}
+
 body {
   font-family: "Inter", sans-serif;
 }
@@ -18,10 +25,10 @@ body {
 @media (prefers-color-scheme: dark) {
   .am-gradient-text {
     background: linear-gradient(to bottom, #e390b9,  #718add);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;   
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;   
   }
 }
 
