@@ -1,12 +1,14 @@
 <template>
   <UContainer class="py-5 border-t border-stone-200 dark:border-stone-800">
     <div class="grid grid-cols-12 gap-3 mb-4">
-      <div class="col-span-12 sm:col-span-4">
+      <div class="col-span-12 sm:col-span-5">
         <div class="text-xl inter-700">Alejandro Millan</div>
-        <div class="dark:text-gray-300 text-stone-600">🇵🇦 Based In Panama</div>
+        <div class="dark:text-gray-300 text-stone-600">
+          🇺🇸 United States (Remote - currently based in 🇵🇦 Panama)
+        </div>
       </div>
       <div
-        class="col-span-12 sm:col-span-8 dark:text-gray-300 text-stone-600 sm:text-right"
+        class="col-span-12 sm:col-span-7 dark:text-gray-300 text-stone-600 sm:text-right"
       >
         Website Built with Nuxt.js, Typescript and Tailwind CSS
       </div>
