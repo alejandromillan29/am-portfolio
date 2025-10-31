@@ -11,6 +11,11 @@
             dots
             :items="project?.imgs"
             class="w-[80%] mx-auto"
+            :ui="{
+              prev: 'dark:bg-stone-950 dark:hover:bg-stone-900 dark:disabled:bg-stone-950/75 dark:ring dark:ring-stone-700 dark:active:bg-stone-800 text-stone-800 dark:text-white ring-stone-300',
+              next: 'dark:bg-stone-950 dark:hover:bg-stone-900 dark:disabled:bg-stone-950/75 dark:ring dark:ring-stone-700 dark:active:bg-stone-800 text-stone-800 dark:text-white ring-stone-300',
+              dot: 'bg-stone-300 data-[state=active]:bg-stone-800 dark:bg-stone-700 data-[state=active]:dark:bg-stone-200',
+            }"
           >
             <img :src="item" class="w-full rounded-lg" />
           </UCarousel>
