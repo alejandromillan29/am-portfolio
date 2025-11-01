@@ -1,14 +1,19 @@
 <template>
   <div
-    class="w-full h-screen flex items-center bg-cover bg-center"
+    class="relative w-full h-screen flex flex-row items-center justify-center bg-cover bg-center"
     :style="{ backgroundImage: heroBgStyle }"
   >
-    <div
-      ref="bgContainer"
-      class="w-full h-screen absolute"
-      v-if="screenSize !== 'mobile'"
+    <Lottie
+      name="hero-bg"
+      :speed="0.3"
+      class="opacity-60 dark:opacity-50 absolute"
+      height="100vh"
+      :renderer-settings="{
+        preserveAspectRatio: 'xMidYMid slice',
+      }"
+      v-if="screenSize != 'mobile'"
     />
-    <UContainer class="max-w-5xl z-1">
+    <UContainer class="max-w-5xl z-1 relative">
       <div class="grid grid-cols-12 gap-5">
         <div class="col-span-4 sm:col-span-3 lg:col-span-3">
           <img :src="AM" class="w-full rounded-full" />
@@ -82,28 +87,14 @@
 </template>
 
 <script lang="ts" setup>
-import lottie, { type AnimationItem } from "lottie-web";
-
 import AM from "@/assets/images/am.png";
 import HeroLight from "@/assets/images/hero-light.png";
 import HeroDark from "@/assets/images/hero-dark.png";
-import LottieAnimation from "@/assets/bg2.json";
 
-let animation: AnimationItem | null = null;
-let observer: MutationObserver;
+const colorMode = useColorMode();
+
 const screenWidth = ref(0);
 const screenSize = ref<"mobile" | "tablet" | "desktop">();
-
-const activeTheme = ref<"light" | "dark">("light");
-const bgContainer = ref<HTMLDivElement | null>(null);
-
-const detectTheme = () => {
-  activeTheme.value = document.documentElement.classList.contains("dark")
-    ? "dark"
-    : "light";
-  if (activeTheme.value === "light") changeAnimationOpacity(0.6);
-  if (activeTheme.value === "dark") changeAnimationOpacity(0.5);
-};
 
 const updateScreenSize = () => {
   screenWidth.value = window.innerWidth;
@@ -112,36 +103,13 @@ const updateScreenSize = () => {
   else screenSize.value = "desktop";
 };
 
-const changeAnimationOpacity = (opacity: number) => {
-  if (bgContainer.value) bgContainer.value.style.opacity = `${opacity}`;
-};
-
 const heroBgStyle = computed(() => {
   if (screenSize.value !== "mobile") return "";
-  if (activeTheme.value === "light") return `url(${HeroLight})`;
-  return `url(${HeroDark})`;
+  if (colorMode.value === "dark") return `url(${HeroDark})`;
+  return `url(${HeroLight})`;
 });
 
 onMounted(() => {
-  detectTheme();
   updateScreenSize();
-  observer = new MutationObserver(detectTheme);
-  observer.observe(document.documentElement, {
-    attributes: true,
-    attributeFilter: ["class"],
-  });
-  if (bgContainer.value) {
-    animation = lottie.loadAnimation({
-      container: bgContainer.value,
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      animationData: LottieAnimation,
-      rendererSettings: {
-        preserveAspectRatio: "xMidYMid slice",
-      },
-    });
-    animation.setSpeed(0.3);
-  }
 });
 </script>
