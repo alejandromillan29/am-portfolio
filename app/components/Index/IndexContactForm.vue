@@ -22,7 +22,7 @@
             type="text"
             placeholder="John Doe"
             class="w-full p-3 mb-4 rounded-lg border border-stone-300 hover:border-stone-400 focus:outline-stone-500 dark:border-stone-500 dark:hover:border-white dark:focus:outline-white"
-            v-model="name"
+            v-model="form.fullName"
           />
         </UFormField>
         <UFormField label="Email">
@@ -30,7 +30,7 @@
             type="email"
             placeholder="john.doe@gmail.com"
             class="w-full p-3 mb-4 rounded-lg border border-stone-300 hover:border-stone-400 focus:outline-stone-500 dark:border-stone-500 dark:hover:border-white dark:focus:outline-white"
-            v-model="email"
+            v-model="form.email"
           />
         </UFormField>
         <UFormField label="Message">
@@ -38,7 +38,7 @@
             placeholder="Your message here..."
             rows="5"
             class="w-full p-3 mb-4 rounded-lg border border-stone-300 hover:border-stone-400 focus:outline-stone-500 dark:border-stone-500 dark:hover:border-white dark:focus:outline-white"
-            v-model="message"
+            v-model="form.message"
           />
         </UFormField>
         <div class="flex flex-row justify-end">
@@ -60,49 +60,35 @@
 <script lang="ts" setup>
 const toast = useToast();
 
-const name = ref("");
-const email = ref("");
-const message = ref("");
+const form = ref({
+  fullName: "",
+  message: "",
+  email: "",
+});
 const loading = ref(false);
 
 const cleanForm = () => {
-  name.value = "";
-  email.value = "";
-  message.value = "";
+  form.value.fullName = "";
+  form.value.message = "";
+  form.value.email = "";
 };
 
 const submitForm = async () => {
   try {
     loading.value = true;
-    const sendEmailReq = await fetch(
-      "https://us-central1-onespot-live.cloudfunctions.net/contactEmail",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          template: "d-a2d3155c689746aea3956f9ff85fb087",
-          email: "amilland29@gmail.com",
-          data: {
-            fullName: name.value,
-            company: "",
-            email: email.value,
-            service: message.value,
-            phone: "",
-          },
-        }),
-      }
-    );
-    const respData = await sendEmailReq.json();
-    if (respData.response === "ok") {
-      toast.add({
-        title: "Success",
-        description: "The form has been submitted.",
-        color: "success",
-      });
-      cleanForm();
-    } else throw new Error();
+    const payload = { ...form.value };
+    const { data, error } = await useFetch("/api/mail", {
+      method: "POST",
+      body: payload,
+    });
+    console.log("✅ Email sent:", data.value);
+    if (error.value) throw error.value;
+    toast.add({
+      title: "Success",
+      description: "The form has been submitted.",
+      color: "success",
+    });
+    cleanForm();
   } catch {
     toast.add({
       title: "Error",
@@ -116,9 +102,9 @@ const submitForm = async () => {
 
 const disableSendBtn = computed(() => {
   if (
-    !name.value.trim() ||
-    !email.value.trim() ||
-    !message.value.trim() ||
+    !form.value.fullName.trim() ||
+    !form.value.email.trim() ||
+    !form.value.message.trim() ||
     loading.value
   )
     return true;
