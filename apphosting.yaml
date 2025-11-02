@@ -1,5 +1,5 @@
 backends:
-  main:
+  am-portfolio:
     runConfig:
       minInstances: 0
       maxInstances: 2
