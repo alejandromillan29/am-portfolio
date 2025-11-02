@@ -1,23 +1,24 @@
-# apphosting.yaml
-runConfig:
-  minInstances: 0
-  maxInstances: 2
-  concurrency: 80
+backends:
+  main:
+    runConfig:
+      minInstances: 0
+      maxInstances: 2
+      concurrency: 80
 
-env:
-  - variable: SENDGRID_API_KEY
-    secret: projects/668040448879/secrets/Sg-Key
-    availability:
-      - RUNTIME
-  - variable: SENDGRID_TEMPLATE_ID
-    value: d-a2d3155c689746aea3956f9ff85fb087
-    availability:
-      - RUNTIME
-  - variable: SENDGRID_FROM_EMAIL
-    value: noreply@onespotlive.com
-    availability:
-      - RUNTIME
-  - variable: SENDGRID_TO_EMAIL
-    value: amilland29@gmail.com
-    availability:
-      - RUNTIME
+    env:
+      - variable: SENDGRID_API_KEY
+        secret: projects/668040448879/secrets/Sg-Key
+        availability:
+          - RUNTIME
+      - variable: SENDGRID_TEMPLATE_ID
+        value: d-a2d3155c689746aea3956f9ff85fb087
+        availability:
+          - RUNTIME
+      - variable: SENDGRID_FROM_EMAIL
+        value: noreply@onespotlive.com
+        availability:
+          - RUNTIME
+      - variable: SENDGRID_TO_EMAIL
+        value: amilland29@gmail.com
+        availability:
+          - RUNTIME
