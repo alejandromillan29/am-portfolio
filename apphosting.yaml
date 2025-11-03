@@ -1,10 +1,19 @@
 runConfig:
   minInstances: 0
 env:
-  - variable: MESSAGE
-    value: Hello world!
+  - variable: SENDGRID_TEMPLATE_ID
+    value: d-a2d3155c689746aea3956f9ff85fb087
     availability:
-      - RUNTIME
+      - BUILD
+
+  - variable: SENDGRID_FROM_EMAIL
+    value: noreply@onespotlive.com
+    availability:
+      - BUILD
+
+  - variable: SENDGRID_TO_EMAIL
+    value: amilland29@gmail.com
+    availability:
       - BUILD
 
   # Grant access to secrets in Cloud Secret Manager.
