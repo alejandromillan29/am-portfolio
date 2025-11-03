@@ -15,6 +15,6 @@ export default function mygradesComp() {
     techStack: ["Vue", "Bulma", "Firebase"],
     url: "https://wrwlf-app.web.app/",
     year: "2023",
-    repo: "https://github.com/KidDarknezz/wrwlf",
+    repo: "https://github.com/alejandromillan29/wrwlf",
   } as ProjectData;
 }

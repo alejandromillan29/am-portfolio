@@ -33,7 +33,7 @@
             }"
           />
           <UButton
-            to="https://github.com/KidDarknezz"
+            to="https://github.com/alejandromillan29"
             target="_blank"
             leading-icon="i-lucide-github"
             variant="ghost"

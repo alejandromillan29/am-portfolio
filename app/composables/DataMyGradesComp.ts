@@ -16,6 +16,6 @@ export default function mygradesComp() {
     techStack: ["Vue", "Quasar", "PWA", "Firebase"],
     url: "https://gradesapp-ccfd8.web.app/",
     year: "2021",
-    repo: "https://github.com/KidDarknezz/grades-app",
+    repo: "https://github.com/alejandromillan29/grades-app",
   } as ProjectData;
 }
