@@ -1,5 +1,6 @@
 runConfig:
   minInstances: 0
+
 env:
   - variable: SENDGRID_TEMPLATE_ID
     value: d-a2d3155c689746aea3956f9ff85fb087
@@ -20,8 +21,3 @@ env:
     secret: projects/232523475037/secrets/SENDGRID_API_KEY
     availability:
       - BUILD
-
-  # Grant access to secrets in Cloud Secret Manager.
-  # See https://firebase.google.com/docs/app-hosting/configure#secret-parameters
-  # - variable: MY_SECRET
-  #   secret: mySecretRef
