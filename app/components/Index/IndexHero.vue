@@ -71,7 +71,7 @@
               leading-icon="i-lucide-github"
               variant="ghost"
               color="neutral"
-              to="https://github.com/KidDarknezz"
+              to="https://github.com/alejandromillan29"
               target="_blank"
               trailing-icon="i-lucide-external-link"
               :ui="{
