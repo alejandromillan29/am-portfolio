@@ -7,7 +7,7 @@ backends:
 
     env:
       - variable: SENDGRID_API_KEY
-        secret: projects/668040448879/secrets/Sg-Key
+        secret: projects/232523475037/secrets/SENDGRID_API_KEY
         availability:
           - RUNTIME
       - variable: SENDGRID_TEMPLATE_ID
