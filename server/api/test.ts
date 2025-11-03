@@ -6,7 +6,7 @@ export default defineEventHandler(async (event) => {
       toEmail: config.sendgridToEmail,
       fromEmail: config.sendgridFromEmail,
       templateId: config.sendgridTemplateId,
-      // apiKey: config.sendgridApiKey,
+      apiKey: config.sendgridApiKey,
     },
   };
 });

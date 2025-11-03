@@ -16,6 +16,11 @@ env:
     availability:
       - BUILD
 
+  - variable: SENDGRID_API_KEY
+    secret: projects/232523475037/secrets/SENDGRID_API_KEY
+    availability:
+      - BUILD
+
   # Grant access to secrets in Cloud Secret Manager.
   # See https://firebase.google.com/docs/app-hosting/configure#secret-parameters
   # - variable: MY_SECRET

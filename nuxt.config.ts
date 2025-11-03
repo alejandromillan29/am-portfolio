@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     storageKey: "nuxt-color-mode",
   },
   runtimeConfig: {
-    // sendgridApiKey: process.env.SENDGRID_API_KEY,
+    sendgridApiKey: process.env.SENDGRID_API_KEY,
     sendgridTemplateId: process.env.SENDGRID_TEMPLATE_ID,
     sendgridFromEmail: process.env.SENDGRID_FROM_EMAIL,
     sendgridToEmail: process.env.SENDGRID_TO_EMAIL,
