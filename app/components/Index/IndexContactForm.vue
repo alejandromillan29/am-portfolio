@@ -87,6 +87,12 @@ const submitForm = async () => {
       title: "Success",
       description: "The form has been submitted.",
       color: "success",
+      ui: {
+        root: "dark:bg-stone-700 dark:ring dark:ring-stone-900",
+        title: "dark:text-white",
+        description: "dark:text-stone-400",
+        close: "dark:text-stone-300 dark:hover-text-white",
+      },
     });
     cleanForm();
   } catch {
@@ -94,6 +100,12 @@ const submitForm = async () => {
       title: "Error",
       description: "An error ocurred.",
       color: "error",
+      ui: {
+        root: "dark:bg-stone-700 dark:ring dark:ring-stone-900",
+        title: "dark:text-white",
+        description: "dark:text-stone-400",
+        close: "dark:text-stone-300 dark:hover-text-white",
+      },
     });
   } finally {
     loading.value = false;
