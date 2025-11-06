@@ -4,7 +4,7 @@ const onespot = DataOneSpotComp();
 const mygrades = DataMyGradesComp();
 const lynkco = DataLynkCoComp();
 const wrwlf = DataWrwlfComp();
-const osstudio = DataOsStudioComp();
+// const osstudio = DataOsStudioComp();
 const passcrate = DataPassCrateComp();
 const osawsdemo = DataOneSpotAWSDemoComp();
 const demfantasy = DataDemFantasyComp();
@@ -16,7 +16,7 @@ export default function projectsComp() {
     lynkco,
     wrwlf,
     demfantasy,
-    osstudio,
+    // osstudio,
     passcrate,
     osawsdemo,
   ] as ProjectData[];
