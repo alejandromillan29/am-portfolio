@@ -163,35 +163,35 @@ const items = ref([
     date: "2023 - Present",
     title: "LEAD DEVELOPER - ONE SPOT INC.",
     description:
-      "As Lead Developer at One Spot and One Spot Studio, I lead the end-to-end development of modern, high-performance web and mobile applications. I design and implement scalable solutions using Vue, Quasar, Nuxt, NuxtUI, Firebase, AWS, and Tailwind, focusing on clean architecture, performance, and user experience. At One Spot, I built a cross-platform event management platform from the ground up, while at One Spot Studio, I create tailored digital products for clients — blending technical precision, creative design, and SEO optimization to deliver results that stand out.",
+      "Responsible for the end-to-end development of a ticketing platform for events in Panama City. Built mobile and web applications using Vue, Ionic, and Capacitor with a serverless Firebase backend. Managed the full product lifecycle — from design to deployment — across web and app stores, ensuring scalability, performance, and a seamless user experience.",
     icon: "i-lucide-code",
   },
   {
     date: "2023 - Present",
     title: "TECHNICAL LEAD - BLUE CORE S.A.",
     description:
-      "As a Technical Lead, I guide frontend development teams for two of Panama's largest banks. I led the creation of new mobile banking features for one bank and currently oversee the development of a new online web banking platform for another — both built with Angular. My focus is on frontend architecture, scalable code practices, and delivering seamless user experiences, while mentoring the team and ensuring high-quality, maintainable interfaces.",
+      "I first guided the frontend team responsible for delivering new mobile banking features for one of Panama's major banks. After that project's success, I was reassigned to a new initiative to build an entire online banking platform from scratch for another leading bank. Both projects leverage Angular, where my focus has been on architecting scalable frontend solutions, ensuring code quality, and mentoring the team to deliver intuitive, high-performance user experiences.",
     icon: "i-lucide-users",
   },
   {
     date: "2021 - 2022",
     title: "QA ENGINEER - BLUE CORE S.A.",
     description:
-      "Developing automated testing for baking mobile application using web technologies as Cypress.io and native technologies as Appium. Implementing CI/CD process for building and deploying mobile apps with Github Actions and Fastlane.",
+      "Developing automated testing for banking mobile application using web technologies as Cypress.io and native technologies as Appium. Implementing CI/CD process for building and deploying mobile apps with Github Actions and Fastlane.",
     icon: "i-lucide-check-circle",
   },
   {
     date: "2020",
     title: "FRONT END DEVELOPER - BATH & BODY WORKS",
     description:
-      "Ecommerce front end developer in multi-national brand, handling up to 8 different websites from all around Latin America.",
+      "Maintained and optimized up to eight e-commerce websites across Latin America for a multinational brand, ensuring consistent performance, design quality, and user experience across multiple regional markets.",
     icon: "i-lucide-layout",
   },
   {
     date: "2019",
     title: "JUNIOR WEB DEVELOPER - VENMETRO INC.",
     description:
-      "Junior web developer in fintech business, working with Ruby on Rails, HTML, CSS and Javascript.",
+      "Developed and optimized new features for Venmetro Inc.’s loan platform, using HTML, CSS, JavaScript, GitHub, and Ruby on Rails, following agile methodologies (Scrum) to ensure efficient project delivery and continuous improvement.",
     icon: "i-lucide-monitor",
   },
 ]);
