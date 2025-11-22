@@ -42,18 +42,26 @@
             performant web and mobile apps, where frontend meets cloud —
             delivering seamless experiences with scalable architecture.
           </h2>
-          <div class="flex flex-row items-center gap-5 flex-wrap">
+          <div class="flex flex-row items-center gap-5 flex-wrap mb-3">
             <UButton
-              label=" View Projects"
+              label="View Projects"
               color="neutral"
               icon="i-lucide-layout-dashboard"
               to="/projects"
             />
             <UButton
-              label=" View Experience"
+              label="View Experience"
               color="neutral"
               icon="i-lucide-user-star"
               to="/experience"
+            />
+            <UButton
+              label="Download CV"
+              color="neutral"
+              icon="i-lucide-file-text"
+              to="/ALEJANDRO_MILLAN.pdf"
+              target="_blank"
+              variant="subtle"
             />
             <span class="hidden sm:block">|</span>
             <UButton
