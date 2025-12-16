@@ -4,7 +4,7 @@
       <div class="col-span-12 sm:col-span-5">
         <div class="text-xl inter-700">Alejandro Millan</div>
         <div class="dark:text-gray-300 text-stone-600">
-          🇺🇸 Based in United States, MN
+          Based in 🇺🇸 United States
           <!-- Based in 🇵🇦 Panama -->
         </div>
       </div>
