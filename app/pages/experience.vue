@@ -163,35 +163,35 @@ const items = ref([
     date: "2023 - Present",
     title: "LEAD DEVELOPER - ONE SPOT INC.",
     description:
-      "Responsible for the end-to-end development of a ticketing platform for events in Panama City. Built mobile and web applications using Vue, Ionic, and Capacitor with a serverless Firebase backend. Managed the full product lifecycle — from design to deployment — across web and app stores, ensuring scalability, performance, and a seamless user experience.",
+      "Led the end-to-end development of a web and mobile ticketing platform for social and cultural events, reaching 8,000+ registered users and surpassing 15,000 tickets sold in under two years. Built and maintained the platform using Vue.js, Ionic, and Capacitor, implementing core features such as authentication, real-time data updates, push notifications, analytics, and secure API consumption with Firebase services. Integrated credit card payment gateways including NMI and local bank digital wallets to enable secure transactions, and engineered the full-stack solution from frontend architecture and backend infrastructure to deployment on the App Store and Google Play.",
     icon: "i-lucide-code",
   },
   {
     date: "2023 - Present",
     title: "TECHNICAL LEAD - BLUE CORE S.A.",
     description:
-      "I first guided the frontend team responsible for delivering new mobile banking features for one of Panama's major banks. After that project's success, I was reassigned to a new initiative to build an entire online banking platform from scratch for another leading bank. Both projects leverage Angular, where my focus has been on architecting scalable frontend solutions, ensuring code quality, and mentoring the team to deliver intuitive, high-performance user experiences.",
+      "Led the frontend development of a large-scale web banking platform designed to serve 200,000+ users, successfully delivering 8 end-to-end customer journeys including onboarding, user unlock, and account recovery flows. Integrated third-party services for biometric validation and online session booking such as FacePhi and Microsoft Bookings, while building the application using Angular 19 and consuming RESTful APIs via AWS Lambda and API Gateway. Established frontend standards to improve performance and maintainability, and mentored developers through code reviews and pair programming to ensure a consistently high level of code quality.",
     icon: "i-lucide-users",
   },
   {
     date: "2021 - 2022",
     title: "QA ENGINEER - BLUE CORE S.A.",
     description:
-      "Developing automated testing for banking mobile application using web technologies as Cypress.io and native technologies as Appium. Implementing CI/CD process for building and deploying mobile apps with Github Actions and Fastlane.",
+      "Implemented automated end-to-end (E2E) testing using Cypress and Appium to validate critical user flows across web and native iOS and Android builds, and developed CI/CD pipelines with Fastlane and GitHub Actions to automate building, testing, and release processes.",
     icon: "i-lucide-check-circle",
   },
   {
     date: "2020",
     title: "FRONT END DEVELOPER - BATH & BODY WORKS",
     description:
-      "Maintained and optimized up to eight e-commerce websites across Latin America for a multinational brand, ensuring consistent performance, design quality, and user experience across multiple regional markets.",
+      "Maintained and supported 8 e-commerce websites across multiple Latin American markets, implementing UI updates and new features using VTEX CMS to ensure consistent performance and localized user experiences.",
     icon: "i-lucide-layout",
   },
   {
     date: "2019",
     title: "JUNIOR WEB DEVELOPER - VENMETRO INC.",
     description:
-      "Developed and optimized new features for Venmetro Inc.’s loan platform, using HTML, CSS, JavaScript, GitHub, and Ruby on Rails, following agile methodologies (Scrum) to ensure efficient project delivery and continuous improvement.",
+      "Contributed to the development of a fintech web platform serving approximately 1,800 monthly users, maintaining and enhancing frontend components using Vue.js within a Ruby on Rails application while strengthening full-stack development knowledge.",
     icon: "i-lucide-monitor",
   },
 ]);
